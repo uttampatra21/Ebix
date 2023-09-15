@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Chakra+Petch&family=Montserrat:wght@300;700&family=Open+Sans&family=Pacifico&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,300;1,400;1,500&family=Rajdhani:wght@500&family=Raleway:wght@200&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.container {
+  padding: 1rem 4rem;
+}
+/* 
+*Header Start
+*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 10px 40px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.items {
+  display: flex;
+  gap: 1.5rem;
+}
+.cart {
+  position: relative;
+}
+#cart-item {
+  position: absolute;
+  top: -5px;
+  left: 25px;
+  color: rgb(182, 7, 7);
+  font-size: 0.8rem;
+  border: 1px solid red;
+  border-radius: 47px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.items i {
+  font-size: 1.8rem;
+  color: black;
+}
+
+/* 
+*Header End
+*/
+
+/* 
+*Hero Section Start
+ */
+.home {
+  max-width: 120rem;
+  margin: 10px auto;
+  text-align: center;
+}
+.grid {
+  display: grid;
+}
+.grid-two--col {
+  grid-template-columns: repeat(2, 1fr);
+}
+.shop-now {
+  padding: 12px 2.2rem;
+  background-color: transparent;
+  color: black;
+  border: 1.5px solid #1399f9;
+  border-radius: 50px;
+  font-weight: 500;
+}
+.shop-now:hover {
+  background-color: #034f9c;
+  color: #fff;
+  transition: 0.2s;
+}
+.hero-sec--img > img {
+  width: 230px;
+  border-radius: 5px;
+  display: block;
+}
+
+/* 
+*Servisec and Trusted Section End
+ */
+.services i,
+.multi-services i {
+  font-size: 1.4rem;
+  color: #0071e3;
+}
+.gird-three--cols {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.services,
+.multi-services {
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 10px;
+  box-shadow: 0 10px 40px 5px rgba(0, 0, 0, 0.05);
+}
+.ser-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.multi-services--cont {
+  display: flex;
+  flex-direction: column;
+}
+.services-title {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: "#fff";
+}
+.trusted {
+  background-color: #d5dfe8;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+.trusted-companies > ul {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.trusted-companies img {
+  width: 35px;
+}
+
+/* 
+*Footer Start
+*/
+footer {
+  background: #0d1117;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.footer-top {
+}
+.error-meg {
+  text-align: center;
+}
+/* 
+*Css media 
+*/
+@media only screen and (max-width: 600px) {
+  .grid {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .multi-services--cont {
+    flex-direction: row;
+  }
+}
