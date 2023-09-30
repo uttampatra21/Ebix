@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { AppContext } from "../context/productcontext";
+import { useGOlobalProduct } from "../context/productcontext";
+
 const Home = () => {
-  const myName = useContext(AppContext);
+  // use context Api
+  const myName = useGOlobalProduct();
+
   return (
-    <div className="home">
+    <div className="home container">
       <div className="grid grid-two--col">
         <div className="hero-sec--det">
           <p style={{ fontSize: "13px", color: " #0071e3" }}>Welcome to</p>

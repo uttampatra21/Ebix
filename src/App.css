@@ -26,7 +26,7 @@ button {
   color: #fff;
 }
 .container {
-  padding: 1rem 4rem;
+  padding: 1rem 5rem;
 }
 /* 
 *Header Start
@@ -76,16 +76,22 @@ button {
 /* 
 *Hero Section Start
  */
+
 .home {
   max-width: 120rem;
   margin: 10px auto;
   text-align: center;
 }
 .grid {
-  display: grid;
+  display: flex;
+  justify-content: center;
 }
-.grid-two--col {
+/* .grid-two--col {
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+} */
+.hero-sec--det {
+  width: 50%;
 }
 .shop-now {
   padding: 12px 2.2rem;
@@ -99,6 +105,10 @@ button {
   background-color: #034f9c;
   color: #fff;
   transition: 0.2s;
+}
+.hero-sec--img {
+  display: flex;
+  justify-content: center;
 }
 .hero-sec--img > img {
   width: 230px;
@@ -179,6 +189,9 @@ footer {
 *Css media 
 */
 @media only screen and (max-width: 600px) {
+  .container {
+    padding: 1rem 3rem;
+  }
   .grid {
     justify-content: center;
     align-items: center;
@@ -189,5 +202,9 @@ footer {
   }
   .multi-services--cont {
     flex-direction: row;
+  }
+  .hero-sec--det {
+    text-align: center;
+    width: 100%;
   }
 }

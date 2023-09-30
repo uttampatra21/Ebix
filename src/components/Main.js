@@ -6,12 +6,12 @@ import Footer from "./Footer";
 
 const Main = () => {
   return (
-    <>
+    <div id="main">
       <Header />
       <Home />
       <Services />
       <Footer />
-    </>
+    </div>
   );
 };
 
