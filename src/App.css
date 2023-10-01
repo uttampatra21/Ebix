@@ -172,6 +172,19 @@ button {
 }
 
 /* 
+*featureProduct Start
+*/
+.featureProduct {
+  background-color: rgba(0, 0, 0, 0.021);
+  padding: 5vw 20vw;
+}
+.featureProduct h6 {
+  color: #034f9c;
+}
+/* 
+*featureProduct End
+*/
+/* 
 *Footer Start
 */
 footer {
@@ -180,8 +193,7 @@ footer {
   display: flex;
   justify-content: center;
 }
-.footer-top {
-}
+
 .error-meg {
   text-align: center;
 }
@@ -206,5 +218,9 @@ footer {
   .hero-sec--det {
     text-align: center;
     width: 100%;
+  }
+  .featureProduct {
+    text-align: center;
+    padding: 1rem;
   }
 }

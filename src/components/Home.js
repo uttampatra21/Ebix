@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
+// import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { useGOlobalProduct } from "../context/productcontext";
 
 const Home = () => {
-  // use context Api
-  const myName = useGOlobalProduct();
+  //! use context Api
 
   return (
     <div className="home container">

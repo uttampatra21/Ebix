@@ -1,7 +1,7 @@
-// for react context we need to follow 3 steps
-// 1. Create context
-// 2. Provider
-// 3. Consumer
+//! for react context we need to follow 3 steps
+//! 1. Create context
+//! 2. Provider
+//! 3. Consumer
 
 // 1. Create Context ===>>>
 import { createContext, useContext, useEffect, useReducer } from "react";
@@ -9,7 +9,7 @@ import axios from "axios";
 import reducer from "../reducer/productreducer";
 const AppContext = createContext();
 
-// 2. Provider ===>>>
+//! 2. Provider ===>>>
 // Api url
 const API = `https://api.pujakaitem.com/api/products`;
 
@@ -24,6 +24,7 @@ const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   // CAlling API
+
   const getProducts = async (url) => {
     try {
       const res = await axios.get(url);
@@ -34,7 +35,7 @@ const AppProvider = ({ children }) => {
     }
   };
 
-  //   USe Effect
+  //!   USe Effect
   useEffect(() => {
     getProducts(API);
   }, []);
@@ -43,8 +44,8 @@ const AppProvider = ({ children }) => {
   );
 };
 
-// Create Custom Hooks
-const useGOlobalProduct = () => {
+//! Create Custom Hooks
+const useGlobalProduct = () => {
   return useContext(AppContext);
 };
-export { AppProvider, AppContext, useGOlobalProduct };
+export { AppProvider, AppContext, useGlobalProduct };
