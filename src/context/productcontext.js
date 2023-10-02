@@ -10,7 +10,7 @@ import reducer from "../reducer/productreducer";
 const AppContext = createContext();
 
 //! 2. Provider ===>>>
-// Api url
+//! Api url
 const API = `https://api.pujakaitem.com/api/products`;
 
 const initialState = {
@@ -18,14 +18,18 @@ const initialState = {
   isError: false,
   products: [],
   featureProducts: [],
+  // ! 2nd APi
+  isSingelLoading: false,
+  singelProduct: {},
 };
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // CAlling API
-
+  //! CAlling API
+  //! API for Cetagories ::
   const getProducts = async (url) => {
+    dispatch({ type: "SET_LOADING" });
     try {
       const res = await axios.get(url);
       const products = await res.data;
@@ -34,13 +38,29 @@ const AppProvider = ({ children }) => {
       dispatch({ type: "API_ERROR" });
     }
   };
+  //! 2nd API For Singel Product ::
+  const getSingleProduct = async (url) => {
+    dispatch({ type: "SET_SINGEL_LOADING" });
+    try {
+      const res = await axios.get(url);
+      const singelProduct = await res.data;
 
+      dispatch({ type: "SET_SINGELPRODUCT", payload: singelProduct });
+    } catch (error) {
+      dispatch({ type: "SINGEL_ERROR" });
+    }
+  };
+
+  //!
   //!   USe Effect
+
   useEffect(() => {
     getProducts(API);
   }, []);
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, getSingleProduct }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 

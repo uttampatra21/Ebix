@@ -10,6 +10,7 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   width: 100%;
   height: 100%;
   font-family: "Poppins", sans-serif;
@@ -178,8 +179,40 @@ button {
   background-color: rgba(0, 0, 0, 0.021);
   padding: 5vw 20vw;
 }
+.feature-container {
+  padding: 10vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
 .featureProduct h6 {
   color: #034f9c;
+}
+.card-image img {
+  width: 100%;
+}
+.card-image img:hover {
+  filter: brightness(80%);
+  transition: 0.5s;
+}
+.card-image {
+  position: relative;
+}
+.card-cetagory {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #fff;
+  padding: 2px 10px;
+  border-radius: 25px;
+  font-size: 10px;
+}
+.card-product--detls {
+  display: flex;
+  justify-content: space-between;
+}
+.product-name {
+  font-size: 12px;
 }
 /* 
 *featureProduct End
@@ -190,10 +223,57 @@ button {
 footer {
   background: #0d1117;
   color: #fff;
+}
+.footer-top {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.ready p {
+  font-size: 12px;
+}
+.get-started a {
+  background-color: #0071e3;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 2px;
+  font-size: 14px;
+}
+.footer-botom {
+  padding-top: 1rem;
+}
+.footer-botom > ul {
   display: flex;
   justify-content: center;
+  gap: 4rem;
 }
-
+.footer-botom > ul p {
+  font-size: 12px;
+  padding-top: 10px;
+}
+.social-madia {
+  padding-top: 10px;
+  display: flex;
+  gap: 0.2rem;
+}
+.social-madia i {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.social-madia i:hover {
+  background-color: #fff;
+  color: #0d1117;
+}
+.copy {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 12px;
+}
 .error-meg {
   text-align: center;
 }
@@ -222,5 +302,28 @@ footer {
   .featureProduct {
     text-align: center;
     padding: 1rem;
+  }
+  .feature-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-cetagory {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+  }
+  .product-name {
+    font-size: 14px;
+  }
+  .footer-botom {
+    padding: 0.7rem 0;
+  }
+  .footer-botom > ul {
+    gap: 1rem;
+    padding: 2rem;
   }
 }

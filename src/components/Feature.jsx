@@ -5,7 +5,7 @@ import { useGlobalProduct } from "../context/productcontext";
 const Feature = () => {
   const { isLoading, featureProducts } = useGlobalProduct();
   if (isLoading) {
-    return <div>.....Loading</div>;
+    return <div style={{ textAlign: "center" }}>.....Loading</div>;
   }
 
   return (

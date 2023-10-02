@@ -15,7 +15,7 @@ const Home = () => {
             make it surprisingly easy for you to find gadgets at lower market
             price.
           </p>
-          <NavLink>
+          <NavLink to="shop">
             <button className="shop-now">SHOP NOW</button>
           </NavLink>
         </div>
