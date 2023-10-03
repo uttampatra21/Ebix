@@ -58,7 +58,7 @@ const SoloProduct = () => {
             <Image imag={image} />
           </div>
           <div className="product-details">
-            <p>{name}</p>
+            <p style={{ fontWeight: 300 }}>{name}</p>
             <div className="stars">
               <div className="stars-image">{stars}</div>
               <div className="stars-count">({stars} customer reviews)</div>
@@ -71,7 +71,11 @@ const SoloProduct = () => {
               </span>
             </div>
             <div className="deals-of--day">
-              Deal of the day : <Price price={price} />
+              Deal of the day :{" "}
+              <strong>
+                {" "}
+                <Price price={price} />
+              </strong>
             </div>
             <div className="description">
               <p>{description}</p>
