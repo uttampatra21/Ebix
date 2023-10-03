@@ -33,7 +33,7 @@ const produtReducer = (state, action) => {
       return {
         ...state,
         isSingelLoading: false,
-        SingleProduct: action.payload,
+        singelProduct: action.payload,
       };
     case "SINGEL_ERROR":
       return {

@@ -44,7 +44,6 @@ const AppProvider = ({ children }) => {
     try {
       const res = await axios.get(url);
       const singelProduct = await res.data;
-
       dispatch({ type: "SET_SINGELPRODUCT", payload: singelProduct });
     } catch (error) {
       dispatch({ type: "SINGEL_ERROR" });

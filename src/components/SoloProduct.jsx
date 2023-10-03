@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useGlobalProduct } from "../context/productcontext";
-import Navtitle from "./Navtitle";
+import Footer from "./Footer";
+import Image from "./Image";
 
 import Price from "../Helper/Price";
 const API = `https://api.pujakaitem.com/api/products`;
@@ -10,19 +11,23 @@ const API = `https://api.pujakaitem.com/api/products`;
 const SoloProduct = () => {
   const { getSingleProduct, isSingelLoading, singelProduct } =
     useGlobalProduct();
+  console.log(singelProduct);
   const { id } = useParams();
+  const {
+    id: asias,
+    name,
+    company,
+    stars,
+    price,
+    colors,
+    description,
+    stock,
+    image,
+  } = singelProduct;
 
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
   }, []);
-  const {
-    id: asias,
-    company,
-    stars,
-    price,
-    description,
-    stock,
-  } = singelProduct;
 
   if (isSingelLoading) {
     return (
@@ -41,15 +46,22 @@ const SoloProduct = () => {
       <Header />
       <div className="singel-product">
         <div className="home-navigation">
-          <Navtitle title={company} />
+          <div>
+            <span>
+              <NavLink to="/">Home</NavLink>
+            </span>
+            <span>/ {company}</span>
+          </div>
         </div>
         <div className="singel-product--container">
-          <div className="product-image"></div>
+          <div className="product-image">
+            <Image imag={image} />
+          </div>
           <div className="product-details">
-            <p>{company}</p>
+            <p>{name}</p>
             <div className="stars">
-              <div className="stars-image"></div>
-              <div className="stars-count">{stars} reviews</div>
+              <div className="stars-image">{stars}</div>
+              <div className="stars-count">({stars} customer reviews)</div>
             </div>
             <div className="product-price">
               {" "}
@@ -83,14 +95,21 @@ const SoloProduct = () => {
               </div>
             </div>
             <div className="product-availability">
-              <p className="stock" style={{ fontSize: "10px", opacity: ".9" }}>
-                Avalable: <span>{stock > 0 ? "In Stock" : "Not Avalable"}</span>
+              <p id="stock">
+                Avalable:{" "}
+                <strong>{stock > 0 ? "In Stock" : "Not Avalable"}</strong>
               </p>
-              <h6 className="">{company}</h6>
+              <p id="stock" style={{ fontWeight: 400 }}>
+                Brand : <strong>{company}</strong>
+              </p>
+            </div>
+            <div className="color">
+              <span className="color">color :{colors}</span>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
