@@ -11,13 +11,13 @@ const Header = () => {
         <ul className="items">
           <li className="cart">
             <NavLink to="/cart">
-              <i class="bx bx-shopping-bag"></i>
+              <i className="bx bx-shopping-bag"></i>
               <span id="cart-item">{Math.floor(Math.random() * 10)}</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="/user">
-              <i class="bx bx-user"></i>
+              <i className="bx bx-user"></i>
             </NavLink>
           </li>
         </ul>

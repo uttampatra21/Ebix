@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./Error";
 import Main from "./components/Main";
-import SingleProduct from "./components/SingleProduct";
+import SingleProduct from "./components/SoloProduct";
 import Shop from "./components/Shop";
 
 const App = () => {

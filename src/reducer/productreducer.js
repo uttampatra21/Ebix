@@ -35,11 +35,11 @@ const produtReducer = (state, action) => {
         isSingelLoading: false,
         SingleProduct: action.payload,
       };
-    case "API_ERROR":
+    case "SINGEL_ERROR":
       return {
         ...state,
         isSingelLoading: false,
-        isError: true,
+        SINGEL_ERROR: true,
       };
     //!
     //!
@@ -48,8 +48,8 @@ const produtReducer = (state, action) => {
     default:
       return state;
 
-      // ! Return
-      return state;
+    // ! Return
+    // return state;
   }
 };
 

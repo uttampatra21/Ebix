@@ -5,7 +5,7 @@ const Price = ({ price }) => {
     style: "currency",
     currency: "INR",
     minimumFractionDigits: 2,
-  }).format(price / 170);
+  }).format(price / 200);
 };
 
 export default Price;
