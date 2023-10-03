@@ -6,12 +6,14 @@ import Footer from "./Footer";
 import Image from "./Image";
 
 import Price from "../Helper/Price";
+import Star from "./Star";
+import AddToCart from "./AddToCart";
 const API = `https://api.pujakaitem.com/api/products`;
 
 const SoloProduct = () => {
   const { getSingleProduct, isSingelLoading, singelProduct } =
     useGlobalProduct();
-  console.log(singelProduct);
+
   const { id } = useParams();
   const {
     id: asias,
@@ -23,8 +25,8 @@ const SoloProduct = () => {
     description,
     stock,
     image,
+    reviews,
   } = singelProduct;
-
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
   }, []);
@@ -60,8 +62,7 @@ const SoloProduct = () => {
           <div className="product-details">
             <p style={{ fontWeight: 300 }}>{name}</p>
             <div className="stars">
-              <div className="stars-image">{stars}</div>
-              <div className="stars-count">({stars} customer reviews)</div>
+              <Star star={stars} reviews={reviews} />
             </div>
             <div className="product-price">
               {" "}
@@ -107,8 +108,8 @@ const SoloProduct = () => {
                 Brand : <strong>{company}</strong>
               </p>
             </div>
-            <div className="color">
-              <span className="color">color :{colors}</span>
+            <div className="add-to--cart">
+              {stock > 0 && <AddToCart product={singelProduct} />}
             </div>
           </div>
         </div>
