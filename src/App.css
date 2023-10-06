@@ -326,13 +326,35 @@ button {
 .singel-image img {
   width: 200px;
 }
+.product-color {
+  padding: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+}
+.product-color {
+  position: relative;
+}
+.product-color i {
+  position: absolute;
+  top: 0;
+  color: red;
+}
 /* 
 *featureProduct End
 */
 
 /* 
-*Singel Product
+*soloProduct Start
 */
+.product-quentity {
+  display: flex;
+  gap: 10px;
+}
+/* 
+*soloProduct End
+*/
+
 /* 
 *Footer Start
 */

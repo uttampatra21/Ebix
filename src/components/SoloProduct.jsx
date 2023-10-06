@@ -7,10 +7,12 @@ import Image from "./Image";
 
 import Price from "../Helper/Price";
 import Star from "./Star";
-import AddToCart from "./AddToCart";
+import Colors from "./Colors";
+import Cart from "./Cart";
 const API = `https://api.pujakaitem.com/api/products`;
 
 const SoloProduct = () => {
+  
   const { getSingleProduct, isSingelLoading, singelProduct } =
     useGlobalProduct();
 
@@ -108,8 +110,11 @@ const SoloProduct = () => {
                 Brand : <strong>{company}</strong>
               </p>
             </div>
+            <div className="color">
+              {stock > 0 && <Colors product={singelProduct} />}
+            </div>
             <div className="add-to--cart">
-              {stock > 0 && <AddToCart product={singelProduct} />}
+              {stock > 0 && <Cart product={singelProduct} />}
             </div>
           </div>
         </div>
