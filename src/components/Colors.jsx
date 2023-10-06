@@ -1,9 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 
 const Colors = ({ product }) => {
   const { id, colors } = product;
+  const colorCheck = () => {
+    // colors === curColor ? "<i className='bx bx-check'></i>" : null
+  };
   return (
-    <div>
+    <Wrapper>
       <p
         style={{
           display: "flex",
@@ -17,20 +21,33 @@ const Colors = ({ product }) => {
         {colors.map((curColor, index) => {
           return (
             <button
+              onClick={colorCheck}
               className="product-color"
               key={index}
               style={{
                 backgroundColor: curColor,
               }}
-              onClick={
-                colors === curColor ? "<i className='bx bx-check'></i>" : null
-              }
-            ></button>
+            >
+              <i className="bx bx-check"></i>
+            </button>
           );
         })}
       </p>
-    </div>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.section`
+  .product-color {
+    // position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bx-check {
+    color: white;
+    top: 3px;
+  }
+`;
 
 export default Colors;
