@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 const Cart = ({ product }) => {
   const { id, colors, stock } = product;
@@ -21,6 +22,11 @@ const Cart = ({ product }) => {
           <div className="increase" onClick={setIncrease}>
             <i className="bx bx-plus"></i>
           </div>
+        </div>
+        <div className="cart">
+          <NavLink to="/cart" product={product}>
+            <button className="btn">Add To Cart</button>
+          </NavLink>
         </div>
       </div>
     </Wrapper>
@@ -47,6 +53,14 @@ const Wrapper = styled.section`
     paddinng-left: 10px;
     font-size: 25px;
     color: #0071e3;
+  }
+  .cart {
+    padding: 10px 0;
+  }
+  .btn {
+    padding: 10px;
+    background-color: #0071e3;
+    border-radious: 5px;
   }
 `;
 export default Cart;
