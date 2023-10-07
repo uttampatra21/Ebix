@@ -437,7 +437,7 @@ footer {
 /* --------------------------------------
 *Css media 
 */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .items {
     display: none;
   }
