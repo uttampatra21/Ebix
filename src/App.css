@@ -79,6 +79,9 @@ button {
   font-size: 1.8rem;
   color: black;
 }
+.menu {
+  display: none;
+}
 
 /* 
 *Header End
@@ -224,8 +227,21 @@ button {
 .product-name {
   font-size: 12px;
 }
-
 /* 
+--------------------------
+Product Container
+*/
+.grid-two-colum {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.grid-child:nth-child(1) {
+  background-color: #a6c4e2;
+}
+.grid-child:nth-child(2) {
+  background-color: #0071e3;
+}
+/* ------------------------------------
 *Singel featureProduct Start
 */
 .home-navigation {
@@ -358,7 +374,7 @@ button {
 *soloProduct End
 */
 
-/* 
+/*------------------------------------ 
 *Footer Start
 */
 footer {
@@ -418,10 +434,17 @@ footer {
 .error-meg {
   text-align: center;
 }
-/* 
+/* --------------------------------------
 *Css media 
 */
 @media only screen and (max-width: 600px) {
+  .items {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+
   .container {
     padding: 1rem 3rem;
   }

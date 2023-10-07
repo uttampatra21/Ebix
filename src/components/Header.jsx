@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = () => {
+  const showMenu = () => {};
   return (
     <Wrapper>
       <header className="header">
@@ -30,6 +31,9 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <div className="menu" onClick={showMenu}>
+          <i className="bx bx-menu"></i>
+        </div>
       </header>
     </Wrapper>
   );
@@ -38,6 +42,9 @@ const Header = () => {
 const Wrapper = styled.section`
   .items {
     gap: 2rem;
+  }
+  .menu i {
+    font-size: 2.5rem;
   }
 `;
 export default Header;

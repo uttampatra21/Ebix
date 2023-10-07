@@ -6,6 +6,7 @@ import SingleProduct from "./components/SoloProduct";
 import Shop from "./components/Shop";
 import AddCart from "./components/AddCart";
 import Products from "./components/Products";
+import Header from "./components/Header";
 
 const App = () => {
   return (
@@ -13,7 +14,15 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/item/:id" element={<SingleProduct />} />
-        <Route path="/product" element={<Products />} />
+        <Route
+          path="/product"
+          element={
+            <>
+              <Header />
+              <Products />
+            </>
+          }
+        />
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<AddCart />} />
         <Route path="*" element={<Error />} />

@@ -12,12 +12,24 @@
     />
     <title>Ebix || shop online</title>
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <noscript>DOne</noscript>
     <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
   </body>
+  <script>
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("#root"),
+      smooth: true,
+    });
+  </script>
 </html>
