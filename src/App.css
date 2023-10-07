@@ -21,6 +21,9 @@ body {
   display: none;
 }
 
+a {
+  color: #0d1117;
+}
 button {
   border: none;
   outline: none;
