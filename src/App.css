@@ -192,7 +192,8 @@ button {
   background-color: rgba(0, 0, 0, 0.021);
   padding: 5vw 20vw;
 }
-.feature-container {
+.feature-container,
+.product-container {
   padding: 10vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -235,12 +236,7 @@ Product Container
   display: grid;
   grid-template-columns: 30% 70%;
 }
-.grid-child:nth-child(1) {
-  background-color: #a6c4e2;
-}
-.grid-child:nth-child(2) {
-  background-color: #0071e3;
-}
+
 /* ------------------------------------
 *Singel featureProduct Start
 */
@@ -444,7 +440,9 @@ footer {
   .menu {
     display: flex;
   }
-
+  .bx-menu {
+    font-size: 2.5rem;
+  }
   .container {
     padding: 1rem 3rem;
   }
@@ -468,6 +466,15 @@ footer {
     padding: 1rem;
   }
   .feature-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-two-colum {
     display: flex;
     flex-direction: column;
   }

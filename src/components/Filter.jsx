@@ -1,7 +1,7 @@
 import React from "react";
 
 const Filter = () => {
-  return <div>hj</div>;
+  return <div></div>;
 };
 
 export default Filter;
