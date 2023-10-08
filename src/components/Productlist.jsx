@@ -4,7 +4,11 @@ import Product from "./Product";
 const Productlist = () => {
   return (
     <div>
-      <Product />
+      <div className="feature-container">
+        {featureProducts.map((item) => {
+          return <Product key={item.id} {...item} />;
+        })}
+      </div>
     </div>
   );
 };
