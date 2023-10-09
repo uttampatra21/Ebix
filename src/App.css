@@ -442,6 +442,7 @@ footer {
   padding: 1rem;
 }
 .bottom-nav--cont {
+  background-color: #0071e3;
   padding: 8px;
   display: flex;
   border-radius: 30px;

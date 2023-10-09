@@ -17,7 +17,9 @@ const BottomNav = () => {
           <NavLink>klmkl</NavLink>
         </div>
         <div className="home">
-          <NavLink to="/cart">Cart</NavLink>
+          <NavLink to="/cart">
+            <i className="bx bx-cart-alt"></i>
+          </NavLink>
         </div>
         <div className="home">
           <NavLink>kl</NavLink>
