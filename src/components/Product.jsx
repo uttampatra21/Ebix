@@ -2,8 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Price from "../Helper/Price";
 
+import { useEffect } from "react";
 const Product = (item) => {
   const { id, name, image, price, category } = item;
+  useEffect(() => {});
+
   return (
     <NavLink to={`/item/${id}`}>
       <div className="card">

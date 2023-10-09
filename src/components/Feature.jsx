@@ -1,7 +1,6 @@
 import React from "react";
 import Product from "./Product";
 import { useGlobalProduct } from "../context/productcontext";
-
 const Feature = () => {
   const { isLoading, featureProducts } = useGlobalProduct();
   if (isLoading) {

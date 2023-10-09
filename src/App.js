@@ -6,6 +6,7 @@ import SingleProduct from "./components/SoloProduct";
 import AddCart from "./components/AddCart";
 import Products from "./components/Products";
 import Header from "./components/Header";
+import BottomNav from "./components/BottomNav";
 
 const App = () => {
   return (
@@ -19,10 +20,19 @@ const App = () => {
             <>
               <Header />
               <Products />
+              <BottomNav />
             </>
           }
         />
-        <Route path="/cart" element={<AddCart />} />
+        <Route
+          path="/cart"
+          element={
+            <>
+              <AddCart />
+              <BottomNav />
+            </>
+          }
+        />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

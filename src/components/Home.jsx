@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     const t1 = gsap.timeline();
     t1.from(["#home", "#store", "#welcome"], {
-      y: -200,
+      y: -300,
       ease: "power4",
       delay: 1,
       duration: 1,

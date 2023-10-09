@@ -1,7 +1,7 @@
 import React from "react";
 
 const Short = () => {
-  return <div>Short</div>;
+  return <div></div>;
 };
 
 export default Short;

@@ -376,6 +376,7 @@ Product Container
 footer {
   background: #0d1117;
   color: #fff;
+  padding-bottom: 4rem;
 }
 .footer-top {
   padding: 1rem;
@@ -429,6 +430,29 @@ footer {
 }
 .error-meg {
   text-align: center;
+}
+
+/* ---------------------------------------
+-------------------Bottom Nav------------------------
+ */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+}
+.bottom-nav--cont {
+  padding: 8px;
+  display: flex;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  z-index: 1;
+}
+.bottom-nav--cont .home a {
+  color: #fff;
+}
+.bottom-nav--cont .home a i {
+  font-size: 1.3rem;
 }
 /* --------------------------------------
 *Css media 
