@@ -435,6 +435,7 @@ footer {
 -------------------Bottom Nav------------------------
  */
 .bottom-nav {
+  visibility: hidden;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -459,6 +460,9 @@ footer {
 *Css media 
 */
 @media only screen and (max-width: 500px) {
+  .header {
+    padding: 0 1rem;
+  }
   .items {
     display: none;
   }
@@ -556,5 +560,8 @@ footer {
     height: 100px;
     width: 140px;
     object-fit: cover;
+  }
+  .bottom-nav {
+    visibility: visible;
   }
 }
