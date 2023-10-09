@@ -11,10 +11,14 @@ const BottomNav = () => {
           </NavLink>
         </div>
         <div className="home">
-          <NavLink>kj</NavLink>
+          <NavLink>
+            <i className="bx bx-user"></i>
+          </NavLink>
         </div>
         <div className="home">
-          <NavLink>klmkl</NavLink>
+          <NavLink>
+            <i className="bx bx-cube-alt"></i>
+          </NavLink>
         </div>
         <div className="home">
           <NavLink to="/cart">
@@ -22,7 +26,9 @@ const BottomNav = () => {
           </NavLink>
         </div>
         <div className="home">
-          <NavLink>kl</NavLink>
+          <NavLink>
+            <i className="bx bx-help-circle"></i>
+          </NavLink>
         </div>
       </div>
     </div>
