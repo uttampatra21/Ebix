@@ -12,8 +12,8 @@ const Main = () => {
       <Home />
       <Feature />
       <Services />
-      <BottomNav />
       <Footer />
+      <BottomNav />
     </div>
   );
 };
