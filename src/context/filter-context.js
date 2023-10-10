@@ -21,7 +21,13 @@ export const FilterContextProvider = ({ children }) => {
   //! ------Fetch Products Api
   const { products } = useGlobalProduct();
 
-  //! ------ Use Reducer Hook(Initilaziton Step-1)
+  //* To set GRID view ;
+
+  const setGridView = () => {
+    return dispatch({ type: "SET_GRIDVIEW" });
+  };
+
+  //* ------ Use Reducer Hook(Initilaziton Step-1)
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -29,7 +35,7 @@ export const FilterContextProvider = ({ children }) => {
   }, [products]);
 
   return (
-    <FilterContext.Provider value={{ ...state }}>
+    <FilterContext.Provider value={{ ...state, setGridView }}>
       {children}
     </FilterContext.Provider>
   );

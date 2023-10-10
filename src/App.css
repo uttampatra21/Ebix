@@ -442,12 +442,12 @@ footer {
   padding: 10px 1rem;
 }
 .bottom-nav--cont {
+  background-image: url(https://wallpapers.com/images/hd/grey-blur-simple-iphone-mnzvd1uyyoeqslf5.jpg);
   padding: 0px 10px;
-  background-color: #0071e3;
   display: flex;
   align-items: center;
   border-radius: 30px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(96px);
   z-index: 1;
 }
 .bottom-nav--cont .home a {
@@ -455,6 +455,7 @@ footer {
 }
 .bottom-nav--cont .home a i {
   font-size: 2rem;
+  opacity: 0.95;
 }
 /* --------------------------------------
 *Css media 

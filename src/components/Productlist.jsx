@@ -1,24 +1,15 @@
 import React from "react";
-import Product from "./Product";
 import { UseFilterContex } from "../context/filter-context";
-import styled from "styled-components";
+import Gridview from "./views/Gridview";
+// import Listview from "./view/Listview";
 const Productlist = () => {
-  const { all_products } = UseFilterContex();
-  console.log(all_products);
-  return (
-    <Wrapper>
-      <div className="product-container">
-        {all_products.map((item) => {
-          return <Product key={item.id} {...item} />;
-        })}
-      </div>
-    </Wrapper>
-  );
+  const { setGridView, filter_products } = UseFilterContex();
+  if (setGridView) {
+    return <Gridview product={filter_products} />;
+  }
+  // if (setGridView === false) {
+  //   return <Listview />;
+  // }
 };
 
-const Wrapper = styled.section`
-  .product-container {
-    padding: 10vh 0;
-  }
-`;
 export default Productlist;

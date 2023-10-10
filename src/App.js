@@ -13,7 +13,16 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/item/:id" element={<SingleProduct />} />
+        <Route
+          path="/item/:id"
+          element={
+            <>
+              <Header />
+              <SingleProduct />
+              <BottomNav />
+            </>
+          }
+        />
         <Route
           path="/product"
           element={
@@ -33,7 +42,14 @@ const App = () => {
             </>
           }
         />
-        <Route path="*" element={<Error />} />
+        <Route
+          path="*"
+          element={
+            <>
+              <Error />
+            </>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

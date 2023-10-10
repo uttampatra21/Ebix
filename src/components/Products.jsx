@@ -6,7 +6,6 @@ import { UseFilterContex } from "../context/filter-context";
 import styled from "styled-components";
 const Products = () => {
   const { filter_products } = UseFilterContex();
-  // console.log(filter_products);
   return (
     <Wrapper>
       <div className="con-tan">

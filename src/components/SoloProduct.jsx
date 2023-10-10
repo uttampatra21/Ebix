@@ -12,7 +12,6 @@ import Cart from "./Cart";
 const API = `https://api.pujakaitem.com/api/products`;
 
 const SoloProduct = () => {
-  
   const { getSingleProduct, isSingelLoading, singelProduct } =
     useGlobalProduct();
 
@@ -47,7 +46,6 @@ const SoloProduct = () => {
 
   return (
     <div>
-      <Header />
       <div className="singel-product">
         <div className="home-navigation">
           <div>
